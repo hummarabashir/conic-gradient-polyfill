@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #FBF8F1;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 25vmin;
+  line-height: 20vmin;
+}
+
+.gradient-text {
+  color: transparent;
+  background: conic-gradient(
+    #D9D7F1 12%, 
+    #BAABDA 12%, #BAABDA 33%, 
+    #E7FBBE 33%, #E7FBBE 55%, 
+    #FFCBCB 55%, #FFCBCB 70%, 
+    #B5DEFF 70%, #B5DEFF 87%, 
+    #F7D1BA 87%);
+  background-size: 50%;
+  background-clip: text;  
+  -webkit-background-clip: text;
+
+  animation: expand-rev 0.5s ease forwards;
+
+  cursor: pointer;
+}
+
+.gradient-text:hover {
+  animation: expand 0.5s ease forwards;
+}
+
+@keyframes expand {
+  0% {
+    background-size: 50%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 55%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 325%;
+    background-position: -10em -4em;
+  }
+}
+
+@keyframes expand-rev {
+  0% {
+    background-size: 325%;
+    background-position: -10em -4em;
+  }
+  20% {
+    background-size: 55%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 50%;
+    background-position: 0 0;
+  }
+}
+
+
+.string {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.string1 {
+  animation: move 20s linear infinite;
+  /* animation-delay: 5s; */
+}
+
+.string2 {
+  animation: move2 20s linear infinite;
+  animation-delay: 10s;
+}
+
+.greeting {
+  position: relative;
+  top: 8.6vmin;
+  /* animation: white-out 5s linear infinite; */
+  font-size: 2.6em;
+}
+
+.en {
+  color: #fa8231;
+  /* text-shadow: #ff6239 1px 1px, #ff6339 2px 2px, #ff643a 3px 3px, #ff663a 4px 4px,
+		#ff673b 5px 5px, #ff683c 6px 6px, #ff693c 7px 7px, #ff6a3d 8px 8px,
+		#ff6b3d 9px 9px, #ff6c3e 10px 10px, #ff6e3f 11px 11px, #ff6f3f 12px 12px,
+		#ff7040 13px 13px, #ff7140 14px 14px, #ff7241 15px 15px, #ff7342 16px 16px,
+		#ff7442 17px 17px, #ff7643 18px 18px, #ff7743 19px 19px, #ff7844 20px 20px,
+		#ff7945 21px 21px, #ff7a45 22px 22px, #ff7b46 23px 23px, #ff7c46 24px 24px,
+		#ff7e47 25px 25px, #ff7f48 26px 26px, #ff8048 27px 27px, #ff8149 28px 28px,
+		#ff8249 29px 29px, #ff834a 30px 30px, #ff6138 0px 0px; */
+} 
+
+.es {
+  color: rgb(180, 65, 65);
+}
+
+.de {
+  color: #c678dd;
+}
+
+.it {
+  color: #153d86;
+}
+
+@keyframes move {
+  /* 0% {
+    transform: translatey(-2.8vmin);
+    opacity: 1;
+  }
+  25% {
+    transform: translatey(-10.8vmin);
+    opacity: 1;
+  }
+  50% {
+    transform: translatey(-15vmin);
+  }
+  75% {
+    transform: translatey(-22.5vmin);
+  }
+  100% {
+    transform: translatey(-35.5vmin);
+  } */
+  0% {transform: translateY(100%);}
+  50% {opacity: 0.4;}
+  100% {transform: translateY(-100%);}
+}
+
+@keyframes move2 {
+  0% {transform: translateY(0%);}
+  50% {opacity: 0.4;}
+  100% {transform: translateY(-200%);}
+}
+
+
+#snowflake{
+  width: 40px;
+}
+
+.snow {
+font-size: 20px;
+position: fixed;
+top: -5vh;
+transform: translateY(0);
+ transform : rotate(180deg);
+animation: fall 7s linear forwards infinite;
+opacity: 0.3;
+}
+
+.snow2 {
+  font-size: 20px;
+  left: 600px;
+  position: fixed;
+  top: -20vh;
+  transform: translateY(0);
+   transform : rotate(180deg);
+  animation: fall 7s linear forwards;
+  opacity: 0.3;
+  }
+
+  .snow3 {
+    font-size: 20px;
+    left: 800px;
+    position: fixed;
+    top: -20vh;
+    transform: translateY(0);
+     transform : rotate(180deg);
+    animation: fall 7s linear forwards;
+    opacity: 0.3;
+    }
+
+@keyframes fall {
+/* to */
+to {
+  transform: translateY(50vh);
+}
+}
+
+
+
+
